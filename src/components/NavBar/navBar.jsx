@@ -12,10 +12,10 @@ const Navbar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        <a className="nav-link active" aria-current="page" href="#">Home</a>
-        <a className="nav-link" href="#">Features</a>
-        <a className="nav-link" href="#">Pricing</a>
-        <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+        <a className="nav-link active" aria-current="page" href="#">Remeras</a>
+        <a className="nav-link" href="#">Pantalones</a>
+        <a className="nav-link" href="#">Gorras</a>
+        <a className="nav-link">Zapatillas</a>
       </div>
     </div>
   </div>
