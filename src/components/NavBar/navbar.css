@@ -1,7 +1,13 @@
-.navBar {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*.navBar {
     display: flex;
     align-items: center; 
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 0 20px;
     background-color: #f8f9fa; 
   }
@@ -10,4 +16,24 @@
     display: inline-block;
     margin-left: 30px;
     text-decoration: none;
+  }
+  
+  */
+  .cartCont{
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .img{
+    margin-right: 50px;
+    margin-top: 15px;
+    max-width: 50px;
+    width: 100%;
+    height: 40px;
+  }
+
+  .cantidad{
+    margin-right: 40px;
+    margin-top: 15px;
+    font-size: 25px;
   }
