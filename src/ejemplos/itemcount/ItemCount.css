@@ -1,0 +1,30 @@
+.contenedor{
+    margin-top: 80px;
+    display: flex;
+  justify-content: center; /* Alinea horizontalmente al centro */
+  align-items: center; /* Alinea verticalmente los elementos */
+  gap: 10px; /* Espacio entre los elementos */
+}
+
+.btn-contador{
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: blue;
+    background: none;
+    border-radius: 10px;
+}
+
+.contador{
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+.contenedor-mostrar{
+    margin-left: 40px;
+}
+
+.mostrar{
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -1,6 +1,8 @@
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import ItemListConteiner from "./components/itemListConteiner/ItemListConteiner"
+import ItemDetailContainer from './ejemplos/ItemDetail/ItemDetailContainer'
+
 
 function App() {
 
@@ -8,6 +10,7 @@ function App() {
     <div>
       <Navbar />
       <ItemListConteiner bienvenida="Bienvenido a Fast-commerce!!"/>
+      <ItemDetailContainer/>
     </div>
   )
 }
