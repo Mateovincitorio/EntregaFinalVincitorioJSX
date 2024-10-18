@@ -10,7 +10,7 @@ function App() {
     <div>
       <Navbar />
       <ItemListConteiner bienvenida="Bienvenido a Fast-commerce!!"/>
-      <ItemDetailContainer/>
+      <ItemDetailContainer />
     </div>
   )
 }

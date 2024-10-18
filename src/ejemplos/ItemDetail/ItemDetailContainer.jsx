@@ -1,31 +1,22 @@
 import React from 'react'
-import ItemDetail from './ItemDetail'
-import '../ItemList/Item'
 import { getProducts } from '../ItemList/Item'
 import { useEffect,useState } from 'react'
 
-
-
 const ItemDetailContainer = () => {
-  const [products, setProducts]=useState([])
+  const [product, setProduct] = useState([])
 
   useEffect(()=>{
     getProducts()
-  .then((dataProducts)=>{
-    setProducts(dataProducts)
-  })
-  .catch((error)=>{
-    console.log(error)
-  })
-  .finally(()=>{
-    console.log("finalizo la promesa");
-    
-  })
-  }, [])
-
+    .then((dataProd)=>{
+      const filterProd = dataProd.find((product)=>product.id === "1")
+      setProduct(filterProd)
+    })
+  },[])
 
   return (
-    <ItemDetail products={products}/>
+    <div>
+      <img src={product.img} alt="" />
+    </div>
   )
 }
 

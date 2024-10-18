@@ -1,8 +1,9 @@
+ 
 const products = [
     {
         id:1,
         nombre:"gorra",
-        img:"",
+        img:"/images/gorra.jpg",
         precio:10,
         stock:10,
         category:"gorras"
@@ -10,7 +11,7 @@ const products = [
     {
         id:2,
         nombre:"zapatillas rojas",
-        img:"",
+        img:"/images/zapatillas.jpg",
         precio:100,
         stock:5,
         category: "zapatillas"
@@ -18,7 +19,7 @@ const products = [
     {
         id:3,
         nombre:"pantalones verdes",
-        img:"",
+        img:"/images/green lopmas.jpg",
         precio:20,
         stock:8,
         category:"pantalones"
@@ -26,10 +27,42 @@ const products = [
     {
         id:4,
         nombre:"campera inflable",
-        img:"",
+        img:"/images/campera.jpg",
         precio:40,
         stock:9,
         category: "camperas"
+    },
+    {
+        id:5,
+        nombre:"campera azul",
+        img:"/images/campera.jpg",
+        precio:80,
+        stock:9,
+        category: "camperas"
+    },
+    {
+        id:6,
+        nombre:"zapatillas negras",
+        img:"/images/zapatillas.jpg",
+        precio:40,
+        stock:9,
+        category: "zapatillas"
+    },
+    {
+        id:7,
+        nombre:"pantalones cortos",
+        img:"/images/green lopmas.jpg",
+        precio:40,
+        stock:9,
+        category: "pantalones"
+    },
+    {
+        id:8,
+        nombre:"gorra ",
+        img:"/images/gorra.jpg",
+        precio:40,
+        stock:9,
+        category: "gorra"
     }
 ]
 
