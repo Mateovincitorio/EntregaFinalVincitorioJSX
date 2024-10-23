@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/*.navBar {
+.navbar {
     display: flex;
     align-items: center; 
     justify-content: space-between;
@@ -12,13 +12,26 @@
     background-color: #f8f9fa; 
   }
 
-  .elementoLista{
-    display: inline-block;
-    margin-left: 30px;
+  .categorias{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+
+  a{
     text-decoration: none;
+    color: inherit;
+  }
+
+  .categoria{
+    margin-top: 10px;
+  }
+
+  .categoria:hover{
+    color: darkgrey;
   }
   
-  */
+  
   .cartCont{
     margin-right: 40px;
     display: flex;

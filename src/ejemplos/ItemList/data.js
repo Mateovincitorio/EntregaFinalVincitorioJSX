@@ -26,43 +26,27 @@ const products = [
     },
     {
         id:4,
-        nombre:"campera inflable",
-        img:"/images/campera.jpg",
-        precio:40,
-        stock:9,
-        category: "camperas"
-    },
-    {
-        id:5,
-        nombre:"campera azul",
-        img:"/images/campera.jpg",
-        precio:80,
-        stock:9,
-        category: "camperas"
-    },
-    {
-        id:6,
         nombre:"zapatillas negras",
-        img:"/images/zapatillas.jpg",
+        img:"/images/zapas negras.jpg",
         precio:40,
         stock:9,
         category: "zapatillas"
     },
     {
-        id:7,
+        id:5,
         nombre:"pantalones cortos",
-        img:"/images/green lopmas.jpg",
+        img:"/images/short.jpg",
         precio:40,
         stock:9,
         category: "pantalones"
     },
     {
-        id:8,
-        nombre:"gorra ",
-        img:"/images/gorra.jpg",
+        id:6,
+        nombre:"gorra negra",
+        img:"/images/gorra negra.jpg",
         precio:40,
         stock:9,
-        category: "gorra"
+        category: "gorras"
     }
 ]
 

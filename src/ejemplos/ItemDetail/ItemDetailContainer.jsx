@@ -1,22 +1,24 @@
 import React from 'react'
-import { getProducts } from '../ItemList/Item'
+import { getProducts } from '../ItemList/data'
 import { useEffect,useState } from 'react'
+import ItemDetail from './ItemDetail'
+import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState([])
+  const [product, setProduct] = useState({})
+  const { idProduct }=useParams()
+
 
   useEffect(()=>{
     getProducts()
     .then((dataProd)=>{
-      const filterProd = dataProd.find((product)=>product.id === "1")
+      const filterProd = dataProd.find((product)=>product.id === parseInt(idProduct))
       setProduct(filterProd)
     })
-  },[])
+  },[idProduct])
 
   return (
-    <div>
-      <img src={product.img} alt="" />
-    </div>
+    <ItemDetail product={product}/>
   )
 }
 
