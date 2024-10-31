@@ -19,7 +19,7 @@ const products = [
     {
         id:3,
         nombre:"pantalones verdes",
-        img:["/images/green lopmas.jpg", "/images/short.jpg"],
+        img:["/images/pantalones verdes.jpg", "/images/short.jpg"],
         precio:20,
         stock:8,
         category:"pantalones"
