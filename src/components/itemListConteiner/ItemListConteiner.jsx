@@ -11,8 +11,10 @@ import { useParams } from 'react-router-dom'
 const ItemListConteiner = ({bienvenida}) => {
   const [products, setProducts]=useState([])
 const { idCategory } = useParams()
+const [loading, setLoading] = useState(true)
 
   useEffect(()=>{
+    setLoading(true)
     getProducts()
   .then((dataProducts)=>{
     if(idCategory){
@@ -26,8 +28,7 @@ const { idCategory } = useParams()
     console.log(error)
   })
   .finally(()=>{
-    console.log("finalizo la promesa");
-    
+    setLoading(false)
   })
   }, [idCategory])
 
@@ -35,7 +36,10 @@ const { idCategory } = useParams()
   return (
     <>
     <h1 className="bienvenida">{bienvenida}</h1>
-    <ItemList products={products}/>
+    {
+      loading===true ? (<div className='loading'>cargando...</div>) : <ItemList products={products}/>
+    }
+    
     </>
     
   )

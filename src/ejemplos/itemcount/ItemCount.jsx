@@ -2,27 +2,25 @@ import React from 'react'
 import { useState } from 'react'
 import ItemView from './ItemView'
 import "./ItemCount.css"
+import { CartContext } from '../../context/CartContext'
 
-const ItemCount = () => {
+const ItemCount = ({stock, addProduct}) => {
     const [contador, setContador] = useState(1)
-    const sumar = () =>{
-        const stock = 10
+    const handleclicksumar = () =>{
         if (contador<stock) {
             setContador(contador + 1)
         }
     }
-    const restar = () => {
+    const handleclickrestar = () => {
         if (contador>1) {
             setContador(contador - 1)
         }
     }
 
-    const onAdd = ()=> {
-        console.log(contador)
-    }
+    
 
   return (
-    <ItemView contador={contador} sumar={sumar} restar={restar} onAdd={onAdd}/>
+    <ItemView contador={contador} sumar={handleclicksumar} restar={handleclickrestar} addProduct={addProduct}/>
 
   )
 }

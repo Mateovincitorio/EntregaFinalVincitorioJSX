@@ -3,7 +3,7 @@ const products = [
     {
         id:1,
         nombre:"gorra",
-        img:"/images/gorra.jpg",
+        img:["/images/gorra.jpg", "/images/gorra negra.jpg"],
         precio:10,
         stock:10,
         category:"gorras"
@@ -11,7 +11,7 @@ const products = [
     {
         id:2,
         nombre:"zapatillas rojas",
-        img:"/images/zapatillas.jpg",
+        img:["/images/zapatillas.jpg", "/images/zapas negras.jpg"],
         precio:100,
         stock:5,
         category: "zapatillas"
@@ -19,7 +19,7 @@ const products = [
     {
         id:3,
         nombre:"pantalones verdes",
-        img:"/images/green lopmas.jpg",
+        img:["/images/green lopmas.jpg", "/images/short.jpg"],
         precio:20,
         stock:8,
         category:"pantalones"
@@ -27,7 +27,7 @@ const products = [
     {
         id:4,
         nombre:"zapatillas negras",
-        img:"/images/zapas negras.jpg",
+        img:["/images/zapas negras.jpg", "/images/zapatillas.jpg"],
         precio:40,
         stock:9,
         category: "zapatillas"
@@ -35,7 +35,7 @@ const products = [
     {
         id:5,
         nombre:"pantalones cortos",
-        img:"/images/short.jpg",
+        img:["/images/short.jpg","green lopmas.jpg"],
         precio:40,
         stock:9,
         category: "pantalones"
@@ -43,7 +43,7 @@ const products = [
     {
         id:6,
         nombre:"gorra negra",
-        img:"/images/gorra negra.jpg",
+        img:["/images/gorra negra.jpg", "/images/gorra.jpg"],
         precio:40,
         stock:9,
         category: "gorras"

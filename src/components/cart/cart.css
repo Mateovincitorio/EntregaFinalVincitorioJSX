@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.EmptyCart{
+    text-align: center;
+    margin-top: 200px;
+}
+
+.h2EmptyCart{
+    color: #ef06e0;
+    margin-bottom: 80px;
+    font-family: "DynaPuff";
+}
+
+.carritoH2{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: #ef06e0;
+    text-align: center;
+    font-family: "DynaPuff";
+}
+
+.infoProd{
+    color: #ef06e0;
+    margin-top: 20px;
+    font-family: "DynaPuff";
+}
+
+.img-info{
+    border-radius: 20px;
+    width: 100px;
+}
+
+.borrarProd{
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    color: #ef06e0;
+}

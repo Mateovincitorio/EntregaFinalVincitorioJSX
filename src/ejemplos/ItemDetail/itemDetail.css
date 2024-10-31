@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -19,6 +21,7 @@
     width: 500px;
     height: 500px;
     border-radius: 20px;
+    box-shadow: 3px 4px 8px #ef06e0;
 }
 .contInfo{
     margin-left: 40px;
@@ -28,15 +31,46 @@
 
 .prodName{
     text-align: center;
+    color: #ef06e0 ;
 }
 
 .contPrice{
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    color: #fff;
 }
 
 .prodCat{
     position: relative;
-    top: 300px;
+    top: 150px;
+    color: #fff;
+    float: right;
+}
+
+.image-detail-container{
+    display: flex;
+    margin-left: 40px;
+}
+
+.secondary-images{
+    margin-top: 25px;
+    cursor: pointer;
+    
+}
+
+.img-secondary{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 8px #ef06e0;
+}
+
+.loading{
+    color: #ef06e0;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 24px;
+    font-family: "DynaPuff";
 }
