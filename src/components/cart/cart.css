@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 .EmptyCart{
@@ -29,6 +30,7 @@
 .img-info{
     border-radius: 20px;
     width: 100px;
+    margin-top: 10px;
 }
 
 .borrarProd{
@@ -36,4 +38,45 @@
     height: 20px;
     margin-top: 20px;
     color: #ef06e0;
+    cursor: pointer;
+}
+
+.borrarCarrito{
+    color: #ef06e0;
+    background-color: rgba(78, 78, 78, 0.27);
+    padding: 5px;
+    border-radius: 10px;
+    border: #fff 1px solid;
+    float: right;
+    margin-right: 60px;
+    font-family: "Montserrat", "sans-serif";
+}
+
+.borrarCarrito:hover{
+    background-color: rgba(98, 97, 97, 0.397);
+}
+
+.btnTerminar{
+    color: #ef06e0;
+    background-color: rgba(78, 78, 78, 0.27);
+    padding: 5px;
+    border-radius: 10px;
+    border: #fff 1px solid;
+    float: right;
+    margin-right: 60px;
+    font-family: "Montserrat", "sans-serif";
+}
+
+.btnTerminar:hover{
+    background-color: rgba(98, 97, 97, 0.397);
+}
+
+.totalPrice{
+    color: #ef06e0;
+    font-family: "Montserrat", "sans-serif";
+    margin-left: 50px;
+}
+
+.borrarTodo{
+    margin-top: 50px;
 }

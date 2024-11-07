@@ -7,6 +7,10 @@ import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 
 const ItemDetail = ({product}) => {
+  if (!product || !product.img || product.img.length === 0) {
+    return <p className='loading'>Cargando producto...</p>;
+  }
+
   const [currentImg, setCurrentImg] = useState(product.img[0])
   const { addProductInCart } = useContext(CartContext)
   const [showItemCount, setShowItemCount] = useState(true)

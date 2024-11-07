@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.formLabel{
+    font-family: "Montserrat", "sans-serif";
+    color: #ef06e0;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.formulario{
+    margin-top: 50px;
+}
+
+.botonSubmit{
+    background-color: rgba(78, 78, 78, 0.27);
+    margin-left: 20px;
+    color: #ef06e0;
+    font-family: "Montserrat", "sans-serif";
+    padding: 5px;
+    border-radius: 10px;
+    border: #fff 1px solid;
+}
+
+.botonSubmit:hover{
+    background-color:  rgba(98, 97, 97, 0.397);
+}
+
+.inputForm{
+    border-radius: 20px;
+    font-family: "Montserrat", "sans-serif";
+    background-color: rgba(78, 78, 78, 0.27);
+    color: #fff;
+    padding: 5px;
+    border: #fff 1px solid;
+}
+
+.inputForm:focus{
+    background-color:  rgba(98, 97, 97, 0.397);
+    color: #fff;
+}

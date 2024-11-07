@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .contenedor{
     margin-top: 80px;
     display: flex;
@@ -20,6 +23,7 @@
     margin: 0 20px;
     font-size: 16px;
     color: #fff;
+    font-family: "Montserrat", "sans-serif";
 }
 
 .contenedor-mostrar{
@@ -34,4 +38,5 @@
     background-color: #c5c4c425;
     color: #ef06e0;
     box-shadow: 0 3px 8px #ef06e0;
+    font-family: "Montserrat", "sans-serif";
 }

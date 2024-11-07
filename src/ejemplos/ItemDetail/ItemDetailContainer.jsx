@@ -1,30 +1,32 @@
 import React from 'react'
-import { getProducts } from '../ItemList/data'
 import { useEffect,useState } from 'react'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
-
+import { doc, getDoc } from 'firebase/firestore'
+import db from '../../db/db.js'
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({})
   const { idProduct }=useParams()
   const [loading, setLoading] = useState(true)
 
 
-  useEffect(()=>{
-    setLoading(true)
-    getProducts()
-    .then((dataProd)=>{
-      const filterProd = dataProd.find((product)=>product.id === parseInt(idProduct))
-      setProduct(filterProd)
+  const getProductById = () => {
+    const docRef = doc(db, "products", idProduct )
+    getDoc(docRef)
+    .then((dataDb)=>{
+      const productDb = {id: dataDb.id, ...dataDb.data()}
+      setProduct(productDb)
     })
-    .finally(()=>setLoading(false))
+  }
+
+  useEffect(()=>{
+getProductById()
+
   },[idProduct])
 
   return (
     <>
-    {
-      loading===true ? (<div className='loading'>cargando...</div>):<ItemDetail product={product}/>
-    }
+    <ItemDetail product={product}/>
     </>
   )
 }
