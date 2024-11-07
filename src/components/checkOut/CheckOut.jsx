@@ -25,6 +25,7 @@ const handleChange = (event) => {
 
 const handleSubmit = async(event) =>{
     event.preventDefault()
+    
     const order = {
       buyer: {...dataForm},
       products: {...cart},
