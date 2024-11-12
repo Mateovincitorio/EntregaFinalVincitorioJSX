@@ -27,6 +27,7 @@ const deleteCart =()=>{
 }
 
 const addProductInCart = (newProduct)=>{
+    localStorage.setItem('cart',JSON.stringify(...cart))
     const condicion = isInCart(newProduct.id)
     if(condicion){
         const tempCart = [...cart]
@@ -36,6 +37,8 @@ const addProductInCart = (newProduct)=>{
     }else{
         setCart([...cart, newProduct])
     }
+    localStorage.getItem('cart')
+    
 }
 
 const isInCart =(idProduct)=>{

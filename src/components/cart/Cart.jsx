@@ -6,10 +6,12 @@ import "./cart.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
+
+
+
 const Cart = () => {
   const { cart, totalPrice, deleteProductById, deleteCart } = useContext(CartContext)
   console.log(cart);
-  
   if (cart.length === 0) {
     return(
       <div className='EmptyCart'>

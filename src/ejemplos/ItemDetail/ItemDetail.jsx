@@ -5,6 +5,7 @@ import ItemCount from '../itemcount/ItemCount'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const ItemDetail = ({product}) => {
   if (!product || !product.img || product.img.length === 0) {
@@ -21,6 +22,7 @@ const ItemDetail = ({product}) => {
     const productCart = {...product, quantity:contador}
     addProductInCart(productCart)
     setShowItemCount(false)
+    toast.success("agregaste este producto al carrito!")
   };
   
   return (
@@ -45,7 +47,7 @@ const ItemDetail = ({product}) => {
             </div>
             <div className="divCount">
               {
-                showItemCount === true ? (<ItemCount stock={product.stock} addProduct={addProduct}/>):(<Link to="/cart">Terminar mi compra</Link>)
+                showItemCount === true ? (<ItemCount stock= {product.stock} addProduct={addProduct}/>):(<Link to="/cart">Terminar mi compra</Link>)
               }
               
             </div>

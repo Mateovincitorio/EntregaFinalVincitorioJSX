@@ -3,7 +3,6 @@ import Navbar from './components/navbar/Navbar'
 import ItemListConteiner from "./components/itemListConteiner/ItemListConteiner"
 import ItemDetailContainer from './ejemplos/ItemDetail/ItemDetailContainer'
 import { BrowserRouter, Routes ,Route } from "react-router-dom";
-import EjemploContadorEventListener from './ejemplos/EjemploContadorEventListener';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/cart/Cart';
 import CheckOut from './components/checkOut/CheckOut';

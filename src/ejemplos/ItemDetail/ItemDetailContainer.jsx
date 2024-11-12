@@ -4,10 +4,10 @@ import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import db from '../../db/db.js'
+
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({})
   const { idProduct }=useParams()
-  const [loading, setLoading] = useState(true)
 
 
   const getProductById = () => {

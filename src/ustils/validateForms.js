@@ -6,7 +6,7 @@ let userSchema = object({
     email: string().email("Complete el campo con su Email"),
 })
 
-const validateForm = async() => {
+const validateForm = async(dataForm) => {
     try{
         await userSchema.validate(dataForm)
         return {status: "succes"}

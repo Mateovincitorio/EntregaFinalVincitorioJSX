@@ -53,10 +53,12 @@ const products = [
 ]
 
 const seedProducts = () =>{
+    
     const productsRef = collection(db, "products")
     products.map( ( { id, ...dataProduct } )=>{
         addDoc(productsRef,dataProduct)
     } )
+    
     console.log("prod subidos");
     return
 }

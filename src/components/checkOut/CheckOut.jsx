@@ -7,6 +7,7 @@ import db from "../../db/db.js"
 import {Link} from "react-router-dom"
 import validateForm from '../../ustils/validateForms.js'
 import { toast } from 'react-toastify'
+import "./checkOut.css"
 
 const CheckOut = () => {
 const [ dataForm, setDataForm ] = useState({
@@ -17,7 +18,9 @@ const [ dataForm, setDataForm ] = useState({
 
 const [idOrder, setIdOrder] = useState(null)
 const { cart, totalPrice, deleteCart } = useContext(CartContext)
-
+const [input1, setInput1] = useState('')
+const [input2,setInput2] = useState('')
+const [equalEmail, setEqualEmail] = useState(false)
 
 const handleChange = (event) => {
     setDataForm({...dataForm, [event.target.name]:event.target.value})
@@ -25,7 +28,14 @@ const handleChange = (event) => {
 
 const handleSubmit = async(event) =>{
     event.preventDefault()
-    
+    if(input1===input2 && dataForm.fullname!="" && dataForm.phone!=""){
+      setEqualEmail(true)
+      toast.success('Formulario enviado correctamente')
+    }else{
+      setEqualEmail(false)
+      toast.error("Controle que los mails sean identicos y que los campos esten rellenos")
+      return
+    }
     const order = {
       buyer: {...dataForm},
       products: {...cart},
@@ -38,9 +48,7 @@ const handleSubmit = async(event) =>{
       if(response.status==="error"){
         throw new Error(response.message)
       }
-      toast.success("validacion correcta")
-      uploadOrder(order)
-
+      uploadOrder(order) //ejecuto uploadOrder solo si la validacion es valida
     } catch (error) {
       toast.error(error.message)
     }
@@ -56,18 +64,24 @@ const uploadOrder = (newOrder) =>{
     deleteCart()
   })
 }
-
-
   return (
     <div>
       {
         idOrder===null?(
         <FormCheckOut 
-        dataForm={dataForm} handleChange={handleChange} handleSubmit={handleSubmit}/>
+        dataForm={dataForm} handleChange={handleChange} handleSubmit={handleSubmit} input1={input1} input2={input2} setInput1={setInput1} setInput2={setInput2}/>
         ):(
-          <div><h2>Su orden se subió correctamente!!</h2>
-          <p>Por favor guarde su numero de seguimiento: {idOrder} </p>
-          <Link to='/'>volver al Inicio</Link>
+          <div className='OrdenSubida'><h2 className='Orden'>Su orden se subió correctamente!!</h2>
+          <p className='Orden'>Por favor guarde su numero de seguimiento:<span className='spanOrder'> {idOrder}</span></p>
+          {
+
+            equalEmail ?(
+             <Link to='/' className='volver'>volver al Inicio</Link>
+            ):(
+            toast.error("Los emails deben ser identicos")
+          )
+          }
+        
           </div>
         )
       }
