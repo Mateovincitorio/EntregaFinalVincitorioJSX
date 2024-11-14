@@ -45,6 +45,7 @@ const ItemDetail = ({product}) => {
             <p className='prodPrecio'>Precio: ${product.precio}</p>
             <p className='prodStock'>Stock: {product.stock}</p>
             </div>
+            <div className="descripcion">{product.descripcion}</div>
             <div className="divCount">
               {
                 showItemCount === true ? (<ItemCount stock= {product.stock} addProduct={addProduct}/>):(<Link to="/cart">Terminar mi compra</Link>)

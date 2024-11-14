@@ -53,7 +53,7 @@
 
 .prodCat{
     position: relative;
-    top: 150px;
+    top: 100px;
     color: #fff;
     float: right;
     font-family: "Montserrat", sans-serif;
@@ -84,4 +84,14 @@
     margin-top: 80px;
     font-size: 24px;
     font-family: "DynaPuff";
+}
+
+.descripcion{
+    background-color: #c5c4c425;
+    color: white;
+    border-radius: 20px;
+    box-shadow: -3px 3px 8px #ef06e0;
+    font-family: "Montserrat", "sans-serif";
+    padding: 20px;
+    font-size: 15px;
 }
